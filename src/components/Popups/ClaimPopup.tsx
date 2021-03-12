@@ -100,7 +100,7 @@ export default function ClaimPopup() {
               </span>
             </TYPE.white>
             <TYPE.subHeader style={{ paddingTop: '0.5rem', textAlign: 'center' }} color="white">
-              {t('thanks-for-being-part-of-the-goswap-community-less-than-3')}
+              {t('thanks-for-being-part-of-the-mmmswap-community-less-than-3')}
             </TYPE.subHeader>
           </AutoColumn>
           <AutoColumn style={{ zIndex: 10 }} justify="center">

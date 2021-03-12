@@ -13,7 +13,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]?: string } =  {
   [ChainId.HECOTEST]: '0xca8e585a44375fab1bf6ad50887a770d06f0e32e',
   [ChainId.BIANMAIN]: '0xB88040A237F8556Cf63E305a06238409B3CAE7dC',
   [ChainId.BIANTEST]: '0xB88040A237F8556Cf63E305a06238409B3CAE7dC',
-  [ChainId.OKTEST]: '0x4b81ca59c7d688007866aB1F57894ceFb96fFC43'
+  [ChainId.OKTEST]: '0x3004056Dde248b735ab0b6459444998196ad0533'
 }
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
@@ -207,13 +207,13 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
       new Token(ChainId.HECOMAIN, '0x271B54EBe36005A7296894F819D626161C44825C', 18, 'GOC', 'GoCash Cash')
       // new Token(ChainId.HECOTEST, '0x0f548051B135fa8f7F6190cb78Fd13eCB544fEE6', 8, 'HUSD', 'Heco USD')
     ]
-  ],
-  [ChainId.OKTEST]: [
-    [
-      new Token(ChainId.OKTEST, '0x411c71e1a08b5c3831cafe68a808f00b8ed03188', 18, 'GOT', 'GoSwap Token'),
-      new Token(ChainId.OKTEST, '0xC80f4a6DB039e63dbCC4D7286B77AF14D7DB16Df', 18, 'USDK', 'Heco USD')
-    ]
   ]
+  // [ChainId.OKTEST]: [
+  //   [
+  //     new Token(ChainId.OKTEST, '0x411c71e1a08b5c3831cafe68a808f00b8ed03188', 18, 'GOT', 'GoSwap Token'),
+  //     new Token(ChainId.OKTEST, '0xC80f4a6DB039e63dbCC4D7286B77AF14D7DB16Df', 18, 'USDK', 'Heco USD')
+  //   ]
+  // ]
 }
 
 export interface WalletInfo {

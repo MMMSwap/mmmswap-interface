@@ -31,7 +31,7 @@ export default function URLWarning() {
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex' }}>
         <AlertTriangle style={{ marginRight: 6 }} size={12} /> {t('make-sure-the-url-is')}
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>goswap.app</code>
+        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>mmmswap.app</code>
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>
@@ -39,7 +39,7 @@ export default function URLWarning() {
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex' }}>
         <AlertTriangle style={{ marginRight: 6 }} size={12} /> {t('always-make-sure-the-url-is')}
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>goswap.app</code> -{' '}
+        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>mmmswap.app</code> -{' '}
         {t('bookmark-it-to-be-safe')}
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />

@@ -109,7 +109,7 @@ export default function Menu() {
             <Info size={14} />
             About
           </MenuItem>
-          {/* <MenuItem id="link" href="https://goswapio.medium.com">
+          {/* <MenuItem id="link" href="https://mmmswapio.medium.com">
             <BookOpen size={14} />
             Medium
           </MenuItem> */}
@@ -117,11 +117,11 @@ export default function Menu() {
             <GitHub size={14} />
             Github
           </MenuItem>
-          {/* <MenuItem id="link" href="https://twitter.com/GoSwapio">
+          {/* <MenuItem id="link" href="https://twitter.com/MMMSwapio">
             <Twitter size={14} />
             Twitter
           </MenuItem>
-          <MenuItem id="link" href="https://t.me/Goswapio">
+          <MenuItem id="link" href="https://t.me/MMMswapio">
             <Navigation size={14} />
             Telegram
           </MenuItem>

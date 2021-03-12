@@ -192,7 +192,7 @@ export function useDirectSwapToggle(): [boolean, () => void] {
  * @param tokenB the other token
  */
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
-  return new Token(tokenA.chainId, Pair.getAddress(tokenA, tokenB), 18, 'GLP:' + tokenA.symbol + '-' + tokenA.symbol, 'GoSwap LP Token')
+  return new Token(tokenA.chainId, Pair.getAddress(tokenA, tokenB), 18, 'MLP:' + tokenA.symbol + '-' + tokenB.symbol, 'MMMSwap LP Token')
 }
 
 /**

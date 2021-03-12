@@ -87,11 +87,11 @@ export default function Pool() {
   const liquidityTokens = useMemo(() => tokenPairsWithLiquidityTokens.map(tpwlt => tpwlt.liquidityToken), [
     tokenPairsWithLiquidityTokens
   ])
+  console.log('liquidityTokens', liquidityTokens)
   const [v2PairsBalances, fetchingV2PairBalances] = useTokenBalancesWithLoadingIndicator(
     account ?? undefined,
     liquidityTokens
   )
-
   // fetch the reserves for all V2 pools in which the user has a balance
   const liquidityTokensWithBalances = useMemo(
     () =>
@@ -100,16 +100,13 @@ export default function Pool() {
       ),
     [tokenPairsWithLiquidityTokens, v2PairsBalances]
   )
-
+console.log('liquidityTokensWithBalances', liquidityTokensWithBalances)
   const v2Pairs = usePairs(
-    liquidityTokensWithBalances.map(({ tokens }) => tokens),
-    true
-  )
+    liquidityTokensWithBalances.map(({ tokens }) => tokens))
+  console.log('v2Pairs', v2Pairs)
   const v2IsLoading =
     fetchingV2PairBalances || v2Pairs?.length < liquidityTokensWithBalances.length || v2Pairs?.some(V2Pair => !V2Pair)
-
   const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
-
   const hasV1Liquidity = useUserHasLiquidityInAllTokens()
 
   return (
@@ -181,7 +178,7 @@ export default function Pool() {
               <>
                 <ButtonSecondary>
                   <RowBetween>
-                    <ExternalLink href={'https://info.goswap.app/#/account/' + account}>
+                    <ExternalLink href={'https://info.mmmswap.app/#/account/' + account}>
                       {t('accountAnalyticsAndAccruedFees')}
                     </ExternalLink>
                     <span> ↗</span>
@@ -202,7 +199,7 @@ export default function Pool() {
 
             <AutoColumn justify={'center'} gap="md">
               <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
-                {hasV1Liquidity ? t('goswap-v1-liquidity-found') : t('dont-see-a-pool-you-joined')}{' '}
+                {hasV1Liquidity ? t('mmmswap-v1-liquidity-found') : t('dont-see-a-pool-you-joined')}{' '}
                 <StyledInternalLink id="import-pool-link" to={hasV1Liquidity ? '/migrate/v1' : '/find'}>
                   {hasV1Liquidity ? t('migrateNow') : t('importIt')}
                 </StyledInternalLink>

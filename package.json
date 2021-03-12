@@ -1,6 +1,6 @@
 {
-  "name": "MMMSwap-heco-interface",
-  "description": "MMMSwap Heco Interface",
+  "name": "MMMSwap-ok-interface",
+  "description": "MMMSwap Ok Interface",
   "homepage": ".",
   "private": true,
   "devDependencies": {
