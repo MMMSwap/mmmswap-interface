@@ -12,7 +12,7 @@ const getTokenLogoURL = (chainId: number | undefined, address: string) => {
   if (chainId === 56 || chainId === 97) return `https://tokens.bscswap.com/images/${address}.png`
   if (chainId === 256) return `https://raw.githubusercontent.com/go-protocol/goswap-tokenlist/main/assets/HECOTEST/${address}.png`
   if (chainId === 128) return `https://raw.githubusercontent.com/go-protocol/goswap-tokenlist/main/assets/HECOMAIN/${address}.png`
-  if (chainId === 65) return oktLogo
+  if (chainId === 65) return `https://static.kswap.finance/tokenlist/logos/${address}.png`
   return ''
 }
 
@@ -47,10 +47,10 @@ export default function CurrencyLogo({
 
     if (currency instanceof Token) {
       if (currency instanceof WrappedTokenInfo) {
-        return [...uriLocations, getTokenLogoURL(chainId, currency.address)]
+        return [...uriLocations, getTokenLogoURL(chainId, currency.symbol)]
       }
 
-      return [getTokenLogoURL(chainId, currency.address)]
+      return [getTokenLogoURL(chainId, currency.symbol)]
     }
     return []
   }, [currency, uriLocations, chainId])
